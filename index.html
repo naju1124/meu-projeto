@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Coluna da esquerda -->
+        <div class="column">
+            <div class="polaroid"><img src="foto1.jpg" alt="foto 1" /></div>
+            <div class="polaroid"><img src="foto2.jpg" alt="foto 2" /></div>
+            <div class="polaroid"><img src="foto3.jpg" alt="foto 3" /></div>
+        </div>
+
+        <!-- Envelope central (movido para o grid) -->
+        <div class="center">
+            <div class="envelope" onclick="abrirCarta()">
+                <div class="flap" id="flap"></div>
+                <div class="letter" id="carta">
+                    <p>Sua mensagem linda vai aqui! 💌</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Coluna da direita -->
+        <div class="column">
+            <div class="polaroid"><img src="foto4.jpg" alt="foto 4" /></div>
+            <div class="polaroid"><img src="foto5.jgp.jpeg" alt="foto 5" /></div>
+            <div class="polaroid"><img src="foto6.jpg" alt="foto 6" /></div>
+        </div>
+    </div>
+
+    <script>
+        function abrirCarta() {
+            const flap = document.getElementById("flap");
+            const carta = document.getElementById("carta");
+
+            flap.classList.add("aberta");
+            carta.classList.add("open");
+        }
+    </script>
+</body>
+</html>
