@@ -125,9 +125,10 @@ body {
     }
     to {
         opacity: 1;
-        transform: translate(-50%, -50%); 
+        transform: translate(-50%, -50%);
     }
 }
+
 .letter p {
     font-size: 15px;
     color: #333;
@@ -141,34 +142,46 @@ body {
     height: 100%; /* Garante que o envelope fique alinhado verticalmente */
 }
 
+/* Responsividade para telas menores */
 @media (max-width: 768px) {
     .container {
-        display: flex;
-        flex-direction: column;
+        grid-template-columns: 1fr;
         gap: 20px;
-        padding: 20px;
+        padding: 10px;
     }
 
     .column {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
+        align-items: center;
     }
 
     .polaroid {
-        width: 120px;
+        width: 90vw; /* largura adaptável, ocupa 90% da tela */
+        max-width: 300px; /* limita o máximo para não ficar enorme */
         height: auto;
     }
 
+    .polaroid img {
+        height: auto;
+        max-height: 200px;
+    }
+
     .envelope {
-        margin: 20px 0;
+        width: 80px;
+        height: 60px;
+    }
+
+    .flap, .envelope::before {
+        width: 80px;
+        height: 30px;
     }
 
     .letter {
         width: 90vw;
+        max-width: 350px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        padding: 15px;
         font-size: 14px;
-        transform: translate(-50%, -30%) !important;
     }
 }
 
