@@ -140,3 +140,35 @@ body {
     align-items: center;
     height: 100%; /* Garante que o envelope fique alinhado verticalmente */
 }
+
+@media (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .column {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .polaroid {
+        width: 120px;
+        height: auto;
+    }
+
+    .envelope {
+        margin: 20px 0;
+    }
+
+    .letter {
+        width: 90vw;
+        font-size: 14px;
+        transform: translate(-50%, -30%) !important;
+    }
+}
+
